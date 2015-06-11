@@ -11,5 +11,6 @@
 	"countries.json",
 	"towns.json",
 	"commonTypes.json",
-	"commonEnums.json"
+	"commonEnums.json",
+	"mailTemplates.json"
 ]

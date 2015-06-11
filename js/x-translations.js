@@ -6,6 +6,7 @@
 		$translateProvider.translations('sk', {
 		"menu.stadium.title": "Športový objekt",
 		"menu.new.competition.lower.level.she":"Nová súťaž",
+		"menu.company.title": "Organizácia",
 		"menu.search.competition.lower.level":"Hľadať súťaž",
 		"menu.new.competitionPart.lower.level.she":"Nová časť súťaže",
 		"menu.search.competitionPart.lower.level":"Hľadať časť súťaže",
@@ -190,6 +191,14 @@
 		"schema.stadium.surface.natural":"Prírodný",
 		"schema.stadium.surface.artificial":"Umelý",
 
+		"schema.schema.mailTemplate.title":"Mailová šablona",
+		"schema.mailTemplate.basedata.title":"Základné údaje",
+		"schema.mailTemplate.basedata.name":"Názov vzoru",
+		"schema.mailTemplate.basedata.subject":"Predmet vzoru",
+		"schema.mailTemplate.basedata.text":"Text vzoru",
+		"schema.mailTemplate.basedata.html":"HTML vzor",
+		"schema.mailTemplate.listFields.title":"Názov vzoru",
+
 		"schema.club.title":"Klub",
 		"schema.org.club.codeOfClub":"Kód klubu",
 		"schema.org.club.name":"Názov klubu",
@@ -207,6 +216,8 @@
 		"schema.org.club.houseNumber":"Číslo domu",
 		"schema.org.club.zipCode":"PSČ",
 		"schema.org.club.region":"Kraj",
+
+		"schema.org.company.stateOfOrganization":"Stav organizácie",
 		
 		"schema.association.title":"Zväz",
 		"schema.org.assoc.associationName":"Názov zväzu",
@@ -655,6 +666,14 @@
 		"schema.stadium.type.stadium":"Štadión",
 		"schema.stadium.surface.natural":"Prírodný",
 		"schema.stadium.surface.artificial":"Umelý",
+
+		"schema.schema.mailTemplate.title":"Mailová šablona",
+		"schema.mailTemplate.basedata.title":"Základné údaje",
+		"schema.mailTemplate.basedata.name":"Názov vzoru",
+		"schema.mailTemplate.basedata.subject":"Predmet vzoru",
+		"schema.mailTemplate.basedata.text":"Text vzoru",
+		"schema.mailTemplate.basedata.html":"HTML vzor",
+		"schema.mailTemplate.listFields.title":"Názov vzoru",
 
 		"schema.transfer.listFields.name":"Meno",
 		"schema.transfer.listFields.surName":"Priezvisko",

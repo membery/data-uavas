@@ -8,16 +8,18 @@
 			"transCode": "schema.org.baseData",
 			"type": "object",
 			"properties": {
+				"registrationID": {
+					"title": "Registračné číslo",
+					"transCode": "schema.people.registrationID",
+					"type": "number",
+					"required": true,
+					"sequence": "company_regs"
+				},
 				"name": {
 					"title": "Obchodný názov spoločnosti",
 					"transCode": "schema.org.name",
 					"type": "string",
 					"required": true
-				},
-				"startDate": {
-					"extends":"uri://registries/commontypes#blocks/date",
-					"title": "Dátum založenia",
-					"transCode":"schema.org.club.startDate"
 				},
 				"dateOfRegistration": {
 					"extends":"uri://registries/commontypes#blocks/date",
@@ -26,24 +28,29 @@
 				},
 				"stateOfOrganization": {
 					"extends":"uri://registries/commonenums#blocks/active",
-					"title": "Stav klubu",
-					"transCode":"schema.org.club.stateOfClub",
+					"title": "Stav organizacie",
+					"transCode":"schema.org.company.stateOfOrganization",
 					"type": "string"
 				},
 				"hasLicense": {
 					"extends": "uri://registries/commonenums#blocks/boolean",
 					"title": "Povolenie pre letecké práce",
-					"xxtransCode": "schema.people.isReferee"
+					"transCode": "schema.org.hasLicense"
+				},
+				"firstLicense": {
+					"extends": "uri://registries/commontypes#blocks/date",
+					"title": "Dátum získania prvého povolenia",
+					"transCode": "schema.org.firstLicense"
 				},
 				"licenseStartDate": {
 					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Platnosť od",
-					"xxtransCode": "schema.people.birthDate"
+					"transCode": "schema.org.licenseStartDate"
 				},
 				"licenseEndDate": {
 					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Platnosť do",
-					"xxtransCode": "schema.people.birthDate"
+					"transCode": "schema.org.licenseEndDate"
 				}
 			}
 		},
@@ -58,8 +65,8 @@
 					"type": "string",
 					"render": {
 						"component": "psui-uploadable-image",
-						"height": 230,
-						"width": 230
+						"height": 240,
+						"width": 240
 					}
 				}
 			}
@@ -69,6 +76,36 @@
 			"transCode": "schema.org.contactInfo",
 			"type": "object",
 			"properties": {
+				"statutarOrgan": {
+					"title": "Štatutárny orgán",
+					"xxtransCode": "schema.contactInfo.statutarOrgan",
+					"type": "string"
+				},
+				"headAirOperations": {
+					"title": "VPZ za leteckú prevádzku",
+					"xxtransCode": "schema.contactInfo.headAirOperations",
+					"type": "string"
+				},
+				"headAirOTraffic": {
+					"title": "VPZ za letovú prevádzku",
+					"xxtransCode": "schema.contactInfo.headAirOTraffic",
+					"type": "string"
+				},
+				"headMaintenanceSystem": {
+					"title": "VPZ za systém údržby",
+					"xxtransCode": "schema.contactInfo.headMaintenanceSystem",
+					"type": "string"
+				},
+				"headTraining": {
+					"title": "VPZ za výcvik letového personálu",
+					"xxtransCode": "schema.contactInfo.headTraining",
+					"type": "string"
+				},
+				"pilots": {
+					"title": "Piloti",
+					"xxtransCode": "schema.contactInfo.pilots",
+					"type": "string"
+				},
 				"street": {
 					"title": "Ulica",
 					"transCode": "schema.org.street",
@@ -122,11 +159,6 @@
 			"transCode": "schema.org.bankInfo",
 			"type": "object",
 			"properties": {
-				"statutarOrgan": {
-					"title": "Štatutárny orgán",
-					"transCode": "schema.org.statutarOrgan",
-					"type": "string"
-				},
 				"ico": {
 					"title": "IČO",
 					"transCode": "schema.org.ico",
@@ -136,11 +168,6 @@
 				"dic": {
 					"title": "DIČ",
 					"transCode": "schema.org.dic",
-					"type": "string"
-				},
-				"countryIcDPH": {
-					"title": "krajina IČ DPH",
-					"transCode": "schema.org.country.icDPH",
 					"type": "string"
 				},
 				"icDPH": {
@@ -176,14 +203,12 @@
 				"street": {
 					"title": "Ulica",
 					"transCode": "schema.org.street",
-					"type": "string",
-					"required": true
+					"type": "string"
 				},
 				"houseNumber": {
 					"title": "Číslo domu",
 					"transCode": "schema.org.houseNumber",
-					"type": "string",
-					"required": true
+					"type": "string"
 				},
 				"city": {
 					"$ref": "uri://registries/towns#town"
@@ -191,8 +216,7 @@
 				"zipCode": {
 					"title": "PSČ",
 					"transCode": "schema.org.zipCode",
-					"type": "string",
-					"required": true
+					"type": "string"
 				},
 				"country": {
 					"$ref": "uri://registries/countries#country"
@@ -205,7 +229,7 @@
 		"company":{
 			"table": "organizations",
 			"title": "Organizácia",
-			"xxtransCode": "schema.org.title",
+			"transCode": "schema.org.title",
 			"security": {
 				"create": {
 					"static": [
@@ -243,7 +267,15 @@
 	"views":{
 		"company":{
 			"new":{
-				"$ref":"uri://registries/organizations#models/company"
+				"extends":"uri://registries/organizations#views/company/view",
+				"saveBySchema": "uri://registries/organizations#views/company/view",
+				"properties": {
+					"baseData": {
+						"properties": {
+							"registrationID": null
+						}
+					}
+				}
 			},
 			"view":{
 				"$ref":"uri://registries/organizations#models/company"
@@ -259,6 +291,9 @@
 						}
 					}
 				],
+				"properties": {
+					"logoInfo": null
+				},
 				"listFields": [
 					{
 						"field": "baseData.name",

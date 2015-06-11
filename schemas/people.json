@@ -14,16 +14,6 @@
 					"required": true,
 					"sequence": "people_regs"
 				},
-				"id": {
-					"title": "Identifikačné číslo",
-					"transCode": "schema.people.identifier",
-					"type": "string",
-					"required": true,
-					"unique": {
-						"schema": "uri://registries/people#views/fullperson",
-						"field": "baseData.id"
-					}
-				},
 				"name": {
 					"title": "Meno",
 					"transCode": "schema.people.name",
@@ -40,7 +30,7 @@
 				},
 				"titleBefore": {
 					"title": "Titul pred",
-					"transCode": "schema.people.title.before",
+					"transCode": "schema.people.title",
 					"type": "string"
 				},
 				"birthDate": {
@@ -133,21 +123,26 @@
 				"hasLicense": {
 					"extends": "uri://registries/commonenums#blocks/boolean",
 					"title": "Osvedčenie pilota UAV",
-					"xxtransCode": "schema.people.isReferee"
+					"transCode": "schema.people.hasLicense"
+				},
+				"firstLicense": {
+					"extends": "uri://registries/commontypes#blocks/date",
+					"title": "Prvý dátum osvedčenia",
+					"transCode": "schema.people.firstLicense"
 				},
 				"licenseStartDate": {
 					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Platnosť od",
-					"xxtransCode": "schema.people.birthDate"
+					"transCode": "schema.people.licenseStartDate"
 				},
 				"licenseEndDate": {
 					"extends": "uri://registries/commontypes#blocks/date",
 					"title": "Platnosť do",
-					"xxtransCode": "schema.people.birthDate"
+					"transCode": "schema.people.licenseEndDate"
 				},
 				"category": {
 					"title": "Kategória",
-					"xxtransCode": "schema.people.coach.coachLicense",
+					"transCode": "schema.people.category",
 					"type": "string",
 					"enum": [
 						"profesionál",
@@ -161,17 +156,17 @@
 				},
 				"devices": {
 					"title": "UAV v užívaní",
-					"xxtransCode": "schema.people.mobileNumber",
+					"transCode": "schema.people.devices",
 					"type": "string"
 				},
 				"hasInsurance": {
 					"extends": "uri://registries/commonenums#blocks/boolean",
 					"title": "Poistenie",
-					"xxtransCode": "schema.people.isReferee"
+					"transCode": "schema.people.hasInsurance"
 				},
 				"insuranceCompany": {
 					"title": "Poisťovňa",
-					"xxtransCode": "schema.people.coach.coachLicense",
+					"transCode": "schema.people.insuranceCompany",
 					"type": "string",
 					"enum": [
 						"AEGON",
@@ -191,7 +186,7 @@
 				},
 				"note": {
 					"title": "Poznámka",
-					"transCode":"schema.transfer.note",
+					"transCode":"schema.people.note",
 					"type": "string",
 					"render": {
 						"component": "psui-textarea"
@@ -201,15 +196,15 @@
 		},
 		"listOfOrganizations": {
 			"title": "Zoznam organizácií",
-			"xxtransCode": "schema.roster.listOfPlayers",
+			"transCode": "schema.people.listOfOrganizations",
 			"type": "object",
 			"render": {
 				"width": "full"
 			},
 			"properties": {
-				"players": {
+				"organizations": {
 					"title": "Organizácie",
-					"xxtransCode": "schema.roster.players",
+					"transCode": "schema.people.company",
 					"type": "array",
 					"items": {
 						"objectLink2": {
@@ -355,7 +350,7 @@
 					{
 						"field": "contactInfo.city",
 						"title": "Mesto",
-						"transCode": "schema.people.city"
+						"transCode": "schema.towns.town"
 					}
 				]
 			}
