@@ -78,32 +78,32 @@
 			"properties": {
 				"statutarOrgan": {
 					"title": "Štatutárny orgán",
-					"xxtransCode": "schema.contactInfo.statutarOrgan",
+					"transCode": "schema.contactInfo.statutoryAuthority",
 					"type": "string"
 				},
 				"headAirOperations": {
 					"title": "VPZ za leteckú prevádzku",
-					"xxtransCode": "schema.contactInfo.headAirOperations",
+					"transCode": "schema.contactInfo.headAirOperations",
 					"type": "string"
 				},
 				"headAirOTraffic": {
 					"title": "VPZ za letovú prevádzku",
-					"xxtransCode": "schema.contactInfo.headAirOTraffic",
+					"transCode": "schema.contactInfo.headAirOTraffic",
 					"type": "string"
 				},
 				"headMaintenanceSystem": {
 					"title": "VPZ za systém údržby",
-					"xxtransCode": "schema.contactInfo.headMaintenanceSystem",
+					"transCode": "schema.contactInfo.headMaintenanceSystem",
 					"type": "string"
 				},
 				"headTraining": {
 					"title": "VPZ za výcvik letového personálu",
-					"xxtransCode": "schema.contactInfo.headTraining",
+					"transCode": "schema.contactInfo.headTraining",
 					"type": "string"
 				},
 				"pilots": {
 					"title": "Piloti",
-					"xxtransCode": "schema.contactInfo.pilots",
+					"transCode": "schema.contactInfo.pilots",
 					"type": "string"
 				},
 				"street": {
