@@ -30,7 +30,7 @@
 				},
 				"titleBefore": {
 					"title": "Titul pred",
-					"transCode": "schema.people.title",
+					"transCode": "schema.people.title.before",
 					"type": "string"
 				},
 				"birthDate": {
