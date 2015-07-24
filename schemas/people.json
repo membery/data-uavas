@@ -207,10 +207,14 @@
 					"transCode": "schema.people.company",
 					"type": "array",
 					"items": {
-						"objectLink2": {
-							"schema": "uri://registries/organizations#views/company/view",
-							"fields": {
-								"name": "baseData.name"
+						"organization": {
+							"title": "Organizácia",
+							"transCode": "schema.org.title",
+							"objectLink2": {
+								"schema": "uri://registries/organizations#views/company/view",
+								"fields": {
+									"name": "baseData.name"
+								}
 							}
 						}
 					}
