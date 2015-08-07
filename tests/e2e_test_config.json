@@ -1,0 +1,24 @@
+{
+	"schemas": {
+		"people": {
+			"new": "http://localhost:3000/schema/compiled/uri~3A~2F~2Fregistries~2Fpeople~23views~2Ffullperson~2Fnew",
+			"search": "http://localhost:3000/schema/compiled/uri~3A~2F~2Fregistries~2Fpeople~23views~2Ffullperson~2Fsearch",
+			"newSchema": "",
+			"searchSchema":"",
+			"listNo": 0,
+			"createNo": 0,
+			"findNo": 1,
+			"dependencies": ["association"]
+		},
+		"association": {
+			"new":"http://localhost:3000/schema/compiled/uri~3A~2F~2Fregistries~2Forganizations~23views~2Fcompany~2Fnew",
+			"search": "http://localhost:3000/schema/compiled/uri~3A~2F~2Fregistries~2Forganizations~23views~2Fcompany~2Fsearch",
+			"newSchema": "",
+			"searchSchema":"",
+			"listNo": 1,
+			"createNo": 0,
+			"findNo": 1,
+			"dependencies": []
+		}
+	}
+}
