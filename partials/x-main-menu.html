@@ -1,11 +1,11 @@
 <ul xpsui-menu-items>
-	<li ng-show="hasPermissions(['Registry - read'])"><a href="#" class="x-submenu-toggle"><i class="icon-user fa-2x"></i><span>{{'menu.person.title' | translate}}</span></a>
+	<li ng-show="hasPermissions(['Registry - read'])"><a href="#" class="x-submenu-toggle"><i class="fa fa-user fa-2x"></i><span>{{'menu.person.title' | translate}}</span></a>
 		<ul>
 			<li ng-show="hasPermissions(['Registry - write'])"><a href="#/registry/new/{{'uri://registries/people#views/fullperson'|xpsuiuriescape}}"><span>{{'menu.new.person.lower.level' | translate}}</span></a></li>
 			<li ng-show="hasPermissions(['Registry - read'])"><a href="#/registry/search/{{'uri://registries/people#views/fullperson/search'|xpsuiuriescape}}"><span>{{'menu.search.person.lower.level' | translate}}</span></a></li>
 		</ul>
 	</li>
-	<li ng-show="hasPermissions(['Registry - read'])"><a href="#" class="x-submenu-toggle"><i class="icon-home fa-2x"></i><span>{{'menu.company.title' | translate}}</span></a>
+	<li ng-show="hasPermissions(['Registry - read'])"><a href="#" class="x-submenu-toggle"><i class="fa fa-home fa-2x"></i><span>{{'menu.company.title' | translate}}</span></a>
 		<ul>
 			<li ng-show="hasPermissions(['Registry - write'])"><a href="#/registry/new/{{'uri://registries/organizations#views/company'|xpsuiuriescape}}"><span>{{'menu.new.lower.level.she' | translate}}</span></a></li>
 			<li ng-show="hasPermissions(['Registry - read'])"><a href="#/registry/search/{{'uri://registries/organizations#views/company/search'|xpsuiuriescape}}"><span>{{'menu.search.lower.level' | translate}}</span></a></li>
@@ -18,14 +18,14 @@
 					<li><a href="#/massmailing"><span>{{'menu.massmailing.send.title' | translate}}</span></a></li>
 				</ul>
 			</li>
-	<li ng-show="hasPermissions(['System User'])"><a href="#" class="x-submenu-toggle"><i class="icon-user fa-2x"></i><span>{{'menu.my.profile.title' | translate}}</span></a>
+	<li ng-show="hasPermissions(['System User'])"><a href="#" class="x-submenu-toggle"><i class="fa fa-user fa-2x"></i><span>{{'menu.my.profile.title' | translate}}</span></a>
 		<ul>
 			<li><a href="#/personal-page"><span>{{'menu.profile.lower.level' | translate}}</span></a></li>
 			<!-- <li><a href="#/dashboard"><span>{{'menu.dashboard.lower.level' | translate}}</span></a></li> -->
 			<li><a href="#/personal-change-password"><span>{{'menu.change.password.lower.level' | translate}}</span></a></li>
 		</ul>
 	</li>
-	<li ng-show="hasPermissions(['Security - write'])" ><a href="#" class="x-submenu-toggle"><i class="icon-lock fa-2x"></i><span>{{'menu.permissions.title' | translate}}</span></a>
+	<li ng-show="hasPermissions(['Security - write'])" ><a href="#" class="x-submenu-toggle"><i class="fa fa-lock fa-2x"></i><span>{{'menu.permissions.title' | translate}}</span></a>
 		<ul>
 			<li><a href="#/registry/new/{{'uri://registries/security#groupmaster'|xpsuiuriescape}}"><span>{{'menu.new.group.lower.level' | translate}}</span></a></li>
 			<li><a href="#/security/group/edit/"><span>{{'menu.permission.groups.lower.level' | translate}}</span></a></li>
@@ -34,22 +34,14 @@
 			<li><a href="#/security/profile/edit"><span>{{'menu.profiles.lower.level' | translate}}</span></a></li>
 		</ul>
 	</li>
-	<li ng-show="hasPermissions(['Registry - read'])" ><a href="#" class="x-submenu-toggle"><i class="icon-bar-chart fa-2x"></i><span>{{'menu.statistics.title' | translate}}</span></a>
+	<li ng-show="hasPermissions(['Registry - read'])" ><a href="#" class="x-submenu-toggle"><i class="fa fa-bar-chart fa-2x"></i><span>{{'menu.statistics.title' | translate}}</span></a>
 		<ul>
 			<li><a href="#/statistics"><span>{{'menu.statistics.show.title' | translate}}</span></a></li>
 		</ul>
 	</li>
-	<li ng-show="hasPermissions(['System Admin'])" ng-show="hasPermissions(['System Admin'])" ><a href="#" class="x-submenu-toggle"><i class="icon-info-circle fa-2x"></i><span>{{'menu.schemas.title' | translate}}</span></a>
+	<li ng-show="hasPermissions(['System Admin'])" ng-show="hasPermissions(['System Admin'])" ><a href="#" class="x-submenu-toggle"><i class="fa fa-info-circle fa-2x"></i><span>{{'menu.schemas.title' | translate}}</span></a>
 		<ul>
 			<li><a href="#/schema/edit"><span>{{'menu.schema.list.lower.level' | translate}}</span></a></li>
 		</ul>
 	</li>
-
-	<!-- <li ng-show="hasPermissions(['System Admin'])" ><a href="#" class="x-submenu-toggle"><i class="icon-info-circle fa-2x"></i><span>Web Portál</span></a>
-		<ul>
-			<li ng-show="hasPermissions(['Registry - write'])"><a href="#/portal/edit"><span>Editovať</span></a></li>
-			<li ng-show="hasPermissions(['Registry - write'])"><a href="#/portal/menu"><span>Menu</span></a></li>
-			<li ng-show="hasPermissions(['Registry - write'])"><a href="#/portal/list"><span>Články</span></a></li>
-		</ul>
-	</li> -->
 </ul>
